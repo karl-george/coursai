@@ -36,7 +36,7 @@ const SubjectFilter = () => {
     }
 
     router.push(newUrl, { scroll: false });
-  }, [chosenSubject, pathname, router, searchParams]);
+  }, [chosenSubject]);
 
   return (
     <Select onValueChange={setChosenSubject} value={chosenSubject}>
