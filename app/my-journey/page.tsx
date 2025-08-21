@@ -60,29 +60,29 @@ const Profile = async () => {
             <div>Companions created</div>
           </div>
         </div>
-
-        <Accordion type='multiple'>
-          <AccordionItem value='recent'>
-            <AccordionTrigger className='text-2xl font-bold'>
-              Recent Sessions{' '}
-            </AccordionTrigger>
-            <AccordionContent>
-              <CompanionsList
-                title={'Recent Sessions'}
-                companions={sessionHistory}
-              />
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value='companions'>
-            <AccordionTrigger className='text-2xl font-bold'>
-              My Companions {`(${companions.length})`}
-            </AccordionTrigger>
-            <AccordionContent>
-              <CompanionsList title={'My Companions'} companions={companions} />
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
       </section>
+
+      <Accordion type='multiple'>
+        <AccordionItem value='recent'>
+          <AccordionTrigger className='text-2xl font-bold'>
+            Recent Sessions{' '}
+          </AccordionTrigger>
+          <AccordionContent>
+            <CompanionsList
+              title={'Recent Sessions'}
+              companions={sessionHistory}
+            />
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value='companions'>
+          <AccordionTrigger className='text-2xl font-bold'>
+            My Companions {`(${companions.length})`}
+          </AccordionTrigger>
+          <AccordionContent>
+            <CompanionsList title={'My Companions'} companions={companions} />
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </main>
   );
 };
